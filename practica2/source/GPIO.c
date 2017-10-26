@@ -12,16 +12,7 @@
 #include "MK64F12.h"
 #include "GPIO.h"
 
-extern uint8 FlagPortB;
 GPIO_interruptFlags_t GPIO_intrStatusFlag;
-
-void PORTB_IRQHandler()
-{
-	FlagPortB = TRUE;
-	GPIO_clearInterrupt(GPIO_B);
-
-}
-
 
 uint8 GPIO_getIRQStatus(GPIO_portNameType gpio)
 {

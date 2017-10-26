@@ -1,0 +1,221 @@
+/**
+	\file 
+	\brief 
+		This is a starter file to use the Nokia 5510 LCD. 
+		The LCD is connected as follows:
+		reset-PDT0
+		CE-GND
+		DC-PTD3
+		DIN-PTD2
+		CLK-PTD1
+	\author J. Luis Pizano Escalante, luispizano@iteso.mx
+	\date	1/08/2015
+	\todo
+	    The SPI device driver needs to be completed.
+ */
+
+ 
+#include "SPI.h"
+#include "GPIO.h"
+#include "DatatypeDefinitions.h"
+#include "LCDNokia5110.h"
+#include "LCDNokia5110Images.h"
+#include "GlobalFunctions.h"
+#include "SPI.h"
+#include "LCDFunctions.h"
+#include <stdio.h>
+/** \brief This is the configuration structure to configure the LCD.
+ * Note that is constants and it is because is only a variable used for configuration*/
+const SPI_ConfigType SPI_Config={SPI_DISABLE_FIFO,
+							SPI_LOW_POLARITY,
+							SPI_LOW_PHASE,
+							SPI_MSB,
+							SPI_0,
+							SPI_MASTER,
+							GPIO_MUX2,
+							SPI_BAUD_RATE_2,
+							SPI_FSIZE_8,
+							{GPIO_D,BIT1,BIT2}};
+/*! This array hold the initial picture that is shown in the LCD*/
+extern const uint8 Finger[504];
+uint8 string1[] = "Btn 0";
+uint8 string2[] = "Btn 1";
+uint8 string3[] = "Btn 2";
+uint8 string4[] = "Btn 3";
+uint8 string5[] = "Btn 4";
+uint32 pressedBtn = 0;
+uint8 flagC = FALSE;
+
+typedef struct{
+	uint8 BTN0: 1;
+	uint8 BTN1: 1;
+	uint8 BTN2: 1;
+	uint8 BTN3: 1;
+	uint8 BTN4: 1;
+	uint8 BTN5: 1;
+}BTNType;
+
+BTNType Btn;
+
+int main(void)
+{
+	buttonsInit();
+	SPI_init(&SPI_Config); /*! Configuration function for the LCD port*/
+	LCDNokia_init(); /*! Configuration function for the LCD */
+	LCDNokia_clear();
+	EnableInterrupts;
+
+		for(;;) {	  
+			Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
+			Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
+			Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
+			Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
+			Btn.BTN4 = GPIO_readPIN(GPIO_C, BIT17);
+			Btn.BTN5 = GPIO_readPIN(GPIO_C, BIT16);
+
+			pantallaInicial();
+
+//			do{
+//
+//			}while(TRUE == Btn.BTN0);
+
+			if(TRUE == flagCStatus()){
+//				printf("\nInterrupcion correcta");
+
+				 if(FALSE == Btn.BTN0){
+
+			     		LCDNokia_clear();
+			     		menu();
+//			     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//						LCDNokia_sendString(string1);
+						clearFlagC();
+				 }
+				 else if(FALSE == Btn.BTN1){
+				 		LCDNokia_clear();
+				 		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+				 		LCDNokia_sendString(string2);
+				 		clearFlagC();
+				 }
+				 else if(FALSE == Btn.BTN2){
+				 		LCDNokia_clear();
+				 		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+				 		LCDNokia_sendString(string3);
+				 		clearFlagC();
+				  }
+				 else if(FALSE == Btn.BTN3){
+				 		LCDNokia_clear();
+				 		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+				 		LCDNokia_sendString(string4);
+				 		clearFlagC();
+				 }
+				 else if(FALSE == Btn.BTN4){
+					 	LCDNokia_clear();
+					 	LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+				 		LCDNokia_sendString(string5);
+				 		clearFlagC();
+				  }
+				 else if(FALSE == Btn.BTN5){
+				 		LCDNokia_clear();
+				 		LCDNokia_gotoXY(0,0); /*! It establishes the position to print the messages in the LCD*/
+				 		LCDNokia_bitmap(&Finger[0]);
+				 		clearFlagC();
+				 }
+//
+//
+				 }
+
+//				switch(pressedBtn){
+//				case BIT2:
+//		     		LCDNokia_clear();
+//		     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//					LCDNokia_sendString(string1);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				case BIT3:
+//		     		LCDNokia_clear();
+//		     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//					LCDNokia_sendString(string2);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				case BIT9:
+//		     		LCDNokia_clear();
+//		     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//					LCDNokia_sendString(string3);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				case BIT10:
+//		     		LCDNokia_clear();
+//		     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//					LCDNokia_sendString(string4);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				case BIT11:
+//		     		LCDNokia_clear();
+//		     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//					LCDNokia_sendString(string5);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				case BIT18:
+//		     		LCDNokia_clear();
+//					LCDNokia_bitmap(&Finger[0]);
+//					clearFlagC();
+//					pressedBtn = 0;
+//					break;
+//				default:
+//					break;
+//
+//				}
+//			}
+//			pantallaInicial();
+//			menu();
+//			LCDNokia_clear();
+//			pantallaAlarma();
+
+
+
+
+
+//			LCDNokia_clear();
+//			delay(150000);
+//     		LCDNokia_clear();
+//     		LCDNokia_gotoXY(25,2); /*! It establishes the position to print the messages in the LCD*/
+//			LCDNokia_sendString(string1); /*! It print a string stored in an array*/
+//			delay(150000);
+//     		LCDNokia_clear();
+//     		LCDNokia_gotoXY(0,2); /*! It establishes the position to print the messages in the LCD*/
+//			LCDNokia_sendString(string2); /*! It print a string stored in an array*/
+//			delay(150000);
+//     		LCDNokia_clear();
+//     		LCDNokia_gotoXY(10,2); /*! It establishes the position to print the messages in the LCD*/
+//			LCDNokia_sendString(string3); /*! It print a string stored in an array*/
+//			delay(150000);
+//     		LCDNokia_clear();
+//     		LCDNokia_gotoXY(0,2); /*! It establishes the position to print the messages in the LCD*/
+//			LCDNokia_sendString(string4); /*! It print a string stored in an array*/
+//			delay(150000);
+//     		LCDNokia_clear();
+//     		LCDNokia_gotoXY(0,2); /*! It establishes the position to print the messages in the LCD*/
+//			LCDNokia_sendString(string5); /*! It print a string stored in an array*/
+//			delay(150000);
+//     		LCDNokia_gotoXY(10,1);
+//			LCDNokia_sendString(string2); /*! It print a string stored in an array*/
+//			delay(65000);
+//			LCDNokia_gotoXY(25,2);
+//			LCDNokia_sendChar('2'); /*! It prints a character*/
+//			LCDNokia_sendChar('0'); /*! It prints a character*/
+//			LCDNokia_sendChar('1'); /*! It prints a character*/
+//			LCDNokia_sendChar('7'); /*! It prints a character*/
+//			delay(2000000);
+//			LCDNokia_clear();/*! It clears the information printed in the LCD*/
+//			LCDNokia_bitmap(&Finger[0]); /*! It prints an array that hold an image, in this case is the initial picture*/
+//			delay(65000);
+
+		}
+	
+	return 0;
+}
