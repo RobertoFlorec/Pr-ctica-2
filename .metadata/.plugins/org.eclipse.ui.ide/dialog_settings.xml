@@ -17,4 +17,12 @@
 		<item value="org.eclipse.platform:4.6.3.v20170301-0400"/>
 		<item value="org.eclipse.rcp:4.6.3.v20170301-0400"/>
 	</list>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="294" key="DIALOG_X_ORIGIN"/>
+		<item value="186" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
