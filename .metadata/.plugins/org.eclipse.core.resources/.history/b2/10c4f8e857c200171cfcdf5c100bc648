@@ -38,7 +38,7 @@ void pantallaInicial(void){
 	uint8 centigrados[] = "' C";
 
 	LCDNokia_clear();
-	LCDNokia_gotoXY(10,1);
+	LCDNokia_gotoXY(10,1);ty
 	LCDNokia_sendString(velocidad);
 	LCDNokia_gotoXY(20,2);
 	LCDNokia_sendString(porcentaje);
