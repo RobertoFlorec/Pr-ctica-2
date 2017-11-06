@@ -1,6 +1,99 @@
-12:35:01 **** Incremental Build of configuration Debug for project practica2 ****
+14:49:45 **** Incremental Build of configuration Debug for project practica2 ****
 make -r -j3 all 
-make: Nothing to be done for `all'.
+Building file: ../source/LCDFunctions.c
+Building file: ../source/LCDNokia5110.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDNokia5110.d" -MT"source/LCDNokia5110.o" -MT"source/LCDNokia5110.d" -o "source/LCDNokia5110.o" "../source/LCDNokia5110.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/LCDNokia5110.c:9:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:562:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:561:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDNokia5110.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Finished building: ../source/main.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
 
-12:35:02 Build Finished (took 442ms)
+14:49:47 Build Finished (took 2s.215ms)
 

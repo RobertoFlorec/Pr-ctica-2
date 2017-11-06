@@ -20,7 +20,7 @@
 #define RESET_PIN 0
 /*It configures the LCD*/
 void LCDNokia_init(void);
-/*It writes a byte in the LCD memory. The place of writting is the last place that was indicated by LCDNokia_gotoXY. In the reset state
+/*It writes a byte in the LCD memory. The place of writing is the last place that was indicated by LCDNokia_gotoXY. In the reset state
  * the initial place is x=0 y=0*/
 void LCDNokia_writeByte(uint8, uint8);
 /*it clears all the figures in the LCD*/
@@ -34,7 +34,7 @@ void LCDNokia_bitmap(const uint8*);
 void LCDNokia_sendChar(uint8);
 /*It write a string into the LCD*/
 void LCDNokia_sendString(uint8*);
-/*It used in the initialisation routine*/
+/*It used in the initialization routine*/
 void LCD_delay(void);
 
 

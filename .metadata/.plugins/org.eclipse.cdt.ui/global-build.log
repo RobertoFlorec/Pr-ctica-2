@@ -743,3 +743,1891 @@ arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practi
 12:35:01 **** Incremental Build of configuration Debug for project practica2 ****
 make -r -j3 all 
 make: Nothing to be done for `all'.
+12:48:23 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:548:2: error: 'tempFahrEnetero' undeclared (first use in this function)
+  tempFahrEnetero = (uint8)temperaturaFahrenheit;
+  ^
+../source/LCDFunctions.c:548:2: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:549:2: error: 'tempFahrDecinaml' undeclared (first use in this function)
+  tempFahrDecinaml = (uint8)(temperaturaFahrenheit - tempFahrEnetero) * 100;
+  ^
+../source/LCDFunctions.c:573:9: error: redefinition of 'punto'
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:15: note: previous definition of 'punto' was here
+  static uint8 punto = 0x2E;
+               ^
+../source/LCDFunctions.c:573:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:572:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:474:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: unused variable 'tempFahrDecimal' [-Wunused-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+../source/LCDFunctions.c:471:15: warning: unused variable 'tempFahrEntero' [-Wunused-variable]
+  static uint8 tempFahrEntero = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+12:48:38 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:549:2: error: 'tempFahrDecinmal' undeclared (first use in this function)
+  tempFahrDecinmal = (uint8)(temperaturaFahrenheit - tempFahrEnetero) * 100;
+  ^
+../source/LCDFunctions.c:549:2: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:549:53: error: 'tempFahrEnetero' undeclared (first use in this function)
+  tempFahrDecinmal = (uint8)(temperaturaFahrenheit - tempFahrEnetero) * 100;
+                                                     ^
+../source/LCDFunctions.c:573:9: error: redefinition of 'punto'
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:15: note: previous definition of 'punto' was here
+  static uint8 punto = 0x2E;
+               ^
+../source/LCDFunctions.c:573:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:572:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:474:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: unused variable 'tempFahrDecimal' [-Wunused-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+../source/LCDFunctions.c:471:15: warning: variable 'tempFahrEntero' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrEntero = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+12:48:46 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:549:2: error: 'tempFahrDecinmal' undeclared (first use in this function)
+  tempFahrDecinmal = (uint8)(temperaturaFahrenheit - tempFahrEntero) * 100;
+  ^
+../source/LCDFunctions.c:549:2: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:573:9: error: redefinition of 'punto'
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:15: note: previous definition of 'punto' was here
+  static uint8 punto = 0x2E;
+               ^
+../source/LCDFunctions.c:573:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:572:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:474:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: unused variable 'tempFahrDecimal' [-Wunused-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+12:48:53 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:573:9: error: redefinition of 'punto'
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:15: note: previous definition of 'punto' was here
+  static uint8 punto = 0x2E;
+               ^
+../source/LCDFunctions.c:573:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:572:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:474:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+12:49:17 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:572:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:571:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14772 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14764	      8	   8408	  23180	   5a8c	practica2.axf
+ 
+12:49:53 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+12:53:25 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:572:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:571:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14760 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14752	      8	   8408	  23168	   5a80	practica2.axf
+ 
+12:53:33 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+13:03:54 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:551:9: error: 'temFahrEntero' undeclared (first use in this function)
+  switch(temFahrEntero){
+         ^
+../source/LCDFunctions.c:551:9: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:553:4: error: 'decenaTemperature' undeclared (first use in this function)
+    decenaTemperature = 0x39;
+    ^
+../source/LCDFunctions.c:593:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:592:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+13:04:13 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:552:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 90):
+  ^
+../source/LCDFunctions.c:555:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 80 && tempFahrEntero < 90):
+  ^
+../source/LCDFunctions.c:558:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 70 && tempFahrEntero < 80):
+  ^
+../source/LCDFunctions.c:561:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 60 && tempFahrEntero < 70):
+  ^
+../source/LCDFunctions.c:564:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 50 && tempFahrEntero < 60):
+  ^
+../source/LCDFunctions.c:567:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 40 && tempFahrEntero < 50):
+  ^
+../source/LCDFunctions.c:570:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 30 && tempFahrEntero < 40):
+  ^
+../source/LCDFunctions.c:573:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 20 && tempFahrEntero < 30):
+  ^
+../source/LCDFunctions.c:576:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 10 && tempFahrEntero < 20):
+  ^
+../source/LCDFunctions.c:579:2: error: case label does not reduce to an integer constant
+  case (tempFahrEntero >= 0 && tempFahrEntero < 10):
+  ^
+../source/LCDFunctions.c:593:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:592:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+13:05:34 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:553:54: error: expected ')' before '{' token
+  else if (tempFahrEntero >= 80 && tempFahrEntero < 90{
+                                                      ^
+../source/LCDFunctions.c:582:2: error: expected expression before '}' token
+  }
+  ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+../source/LCDFunctions.c: At top level:
+../source/LCDFunctions.c:585:2: warning: data definition has no type or storage class
+  flagFahrenheit = TRUE;
+  ^
+../source/LCDFunctions.c:585:2: warning: type defaults to 'int' in declaration of 'flagFahrenheit' [-Wimplicit-int]
+../source/LCDFunctions.c:585:2: error: conflicting types for 'flagFahrenheit'
+../source/LCDFunctions.c:18:20: note: previous definition of 'flagFahrenheit' was here
+ static BooleanType flagFahrenheit = FALSE;
+                    ^
+../source/LCDFunctions.c:586:2: warning: data definition has no type or storage class
+  flagCelcius = FALSE;
+  ^
+../source/LCDFunctions.c:586:2: warning: type defaults to 'int' in declaration of 'flagCelcius' [-Wimplicit-int]
+../source/LCDFunctions.c:586:2: error: conflicting types for 'flagCelcius'
+../source/LCDFunctions.c:17:20: note: previous definition of 'flagCelcius' was here
+ static BooleanType flagCelcius = FALSE;
+                    ^
+../source/LCDFunctions.c:595:19: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(0,0);
+                   ^
+../source/LCDFunctions.c:595:21: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(0,0);
+                     ^
+../source/LCDFunctions.c:596:3: warning: data definition has no type or storage class
+   LCDNokia_sendString(formato);
+   ^
+../source/LCDFunctions.c:596:3: warning: type defaults to 'int' in declaration of 'LCDNokia_sendString' [-Wimplicit-int]
+../source/LCDFunctions.c:596:3: warning: parameter names (without types) in function declaration
+../source/LCDFunctions.c:596:3: error: conflicting types for 'LCDNokia_sendString'
+In file included from ../source/LCDFunctions.c:9:0:
+../source/LCDNokia5110.h:36:6: note: previous declaration of 'LCDNokia_sendString' was here
+ void LCDNokia_sendString(uint8*);
+      ^
+../source/LCDFunctions.c:597:19: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(10,2);
+                   ^
+../source/LCDFunctions.c:597:22: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(10,2);
+                      ^
+../source/LCDFunctions.c:598:3: warning: data definition has no type or storage class
+   LCDNokia_sendString(temp);
+   ^
+../source/LCDFunctions.c:598:3: warning: type defaults to 'int' in declaration of 'LCDNokia_sendString' [-Wimplicit-int]
+../source/LCDFunctions.c:598:3: warning: parameter names (without types) in function declaration
+../source/LCDFunctions.c:598:3: error: conflicting types for 'LCDNokia_sendString'
+In file included from ../source/LCDFunctions.c:9:0:
+../source/LCDNokia5110.h:36:6: note: previous declaration of 'LCDNokia_sendString' was here
+ void LCDNokia_sendString(uint8*);
+      ^
+../source/LCDFunctions.c:605:19: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(5,4);
+                   ^
+../source/LCDFunctions.c:605:21: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(5,4);
+                     ^
+../source/LCDFunctions.c:606:3: warning: data definition has no type or storage class
+   LCDNokia_sendString(control);
+   ^
+../source/LCDFunctions.c:606:3: warning: type defaults to 'int' in declaration of 'LCDNokia_sendString' [-Wimplicit-int]
+../source/LCDFunctions.c:606:3: warning: parameter names (without types) in function declaration
+../source/LCDFunctions.c:606:3: error: conflicting types for 'LCDNokia_sendString'
+In file included from ../source/LCDFunctions.c:9:0:
+../source/LCDNokia5110.h:36:6: note: previous declaration of 'LCDNokia_sendString' was here
+ void LCDNokia_sendString(uint8*);
+      ^
+../source/LCDFunctions.c:607:19: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(20,5);
+                   ^
+../source/LCDFunctions.c:607:22: error: expected declaration specifiers or '...' before numeric constant
+   LCDNokia_gotoXY(20,5);
+                      ^
+../source/LCDFunctions.c:608:3: warning: data definition has no type or storage class
+   LCDNokia_sendString(control2);
+   ^
+../source/LCDFunctions.c:608:3: warning: type defaults to 'int' in declaration of 'LCDNokia_sendString' [-Wimplicit-int]
+../source/LCDFunctions.c:608:3: warning: parameter names (without types) in function declaration
+../source/LCDFunctions.c:608:3: error: conflicting types for 'LCDNokia_sendString'
+In file included from ../source/LCDFunctions.c:9:0:
+../source/LCDNokia5110.h:36:6: note: previous declaration of 'LCDNokia_sendString' was here
+ void LCDNokia_sendString(uint8*);
+      ^
+../source/LCDFunctions.c:610:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [source/LCDFunctions.o] Error 1
+13:19:28 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:553:54: error: expected ')' before '{' token
+  else if (tempFahrEntero >= 80 && tempFahrEntero < 90{
+                                                      ^
+../source/LCDFunctions.c:608:1: error: expected expression before '}' token
+ }
+ ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+13:19:45 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:589:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:588:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14964 B         1 MB      1.43%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14956	      8	   8408	  23372	   5b4c	practica2.axf
+ 
+14:17:32 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:582:3: error: 'tempFarhEntero' undeclared (first use in this function)
+   tempFarhEntero -= 10;
+   ^
+../source/LCDFunctions.c:582:3: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:589:2: error: 'unidadTemp' undeclared (first use in this function)
+  unidadTemp = tempFarEntero + 0x30;
+  ^
+../source/LCDFunctions.c:589:15: error: 'tempFarEntero' undeclared (first use in this function)
+  unidadTemp = tempFarEntero + 0x30;
+               ^
+../source/LCDFunctions.c:597:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:596:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+14:18:00 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:583:14: error: 'tempFarhEntero' undeclared (first use in this function)
+  }while(10 < tempFarhEntero);
+              ^
+../source/LCDFunctions.c:583:14: note: each undeclared identifier is reported only once for each function it appears in
+../source/LCDFunctions.c:589:2: error: 'unidadTemp' undeclared (first use in this function)
+  unidadTemp = tempFahrEntero + 0x30;
+  ^
+../source/LCDFunctions.c:597:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:596:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+14:19:17 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:597:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:596:9: warning: unused variable 'fahrenheit' [-Wunused-variable]
+   uint8 fahrenheit[] = "'F";
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14992 B         1 MB      1.43%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14984	      8	   8408	  23400	   5b68	practica2.axf
+ 
+14:22:02 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:606:23: warning: passing argument 1 of 'LCDNokia_sendString' makes pointer from integer without a cast [-Wint-conversion]
+   LCDNokia_sendString(decenaTemperatura);
+                       ^
+In file included from ../source/LCDFunctions.c:9:0:
+../source/LCDNokia5110.h:36:6: note: expected 'uint8 * {aka unsigned char *}' but argument is of type 'uint8 {aka unsigned char}'
+ void LCDNokia_sendString(uint8*);
+      ^
+../source/LCDFunctions.c:597:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15060 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15052	      8	   8408	  23468	   5bac	practica2.axf
+ 
+14:22:12 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:597:9: warning: unused variable 'punto' [-Wunused-variable]
+   uint8 punto = 0x2E;
+         ^
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15060 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15052	      8	   8408	  23468	   5bac	practica2.axf
+ 
+14:22:26 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15060 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15052	      8	   8408	  23468	   5bac	practica2.axf
+ 
+14:23:25 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:27:37 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15060 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15052	      8	   8408	  23468	   5bac	practica2.axf
+ 
+14:27:46 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:28:12 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15060 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15052	      8	   8408	  23468	   5bac	practica2.axf
+ 
+14:31:21 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15064 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15056	      8	   8408	  23472	   5bb0	practica2.axf
+ 
+14:31:35 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:33:17 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15064 B         1 MB      1.44%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15056	      8	   8408	  23472	   5bb0	practica2.axf
+ 
+14:33:26 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:47:39 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15020 B         1 MB      1.43%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15012	      8	   8408	  23428	   5b84	practica2.axf
+ 
+14:47:54 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:50:03 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       15028 B         1 MB      1.43%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15020	      8	   8408	  23436	   5b8c	practica2.axf
+ 
+14:50:13 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:52:50 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14816 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14808	      8	   8408	  23224	   5ab8	practica2.axf
+ 
+14:52:59 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+09:51:09 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'pantallaAlarma':
+../source/LCDFunctions.c:144:3: error: 'otraBandera' undeclared (first use in this function)
+   otraBandera = FALSE;
+   ^
+../source/LCDFunctions.c:144:3: note: each undeclared identifier is reported only once for each function it appears in
+../source/main.c: In function 'main':
+../source/main.c:81:7: error: 'otraBandera' undeclared (first use in this function)
+       otraBandera = TRUE;
+       ^
+../source/main.c:81:7: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../source/main.c:18:0:
+../source/main.c: At top level:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [source/LCDFunctions.o] Error 1
+09:51:37 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+../source/main.c: In function 'main':
+../source/main.c:81:7: error: 'otraBandera' undeclared (first use in this function)
+       otraBandera = TRUE;
+       ^
+../source/main.c:81:7: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../source/main.c:18:0:
+../source/main.c: At top level:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:473:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:472:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../source/LCDFunctions.c
+ 
+09:51:50 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+Finished building: ../source/main.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+09:52:00 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+09:55:06 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:475:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:474:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14808 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14800	      8	   8408	  23216	   5ab0	practica2.axf
+ 
+09:55:12 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:35:36 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+Finished building: ../source/main.c
+ 
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:37:08 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/LCDFunctions.c:8:0:
+../source/LCDFunctions.c: In function 'pantallaAlarma':
+../source/LCDFunctions.h:14:18: error: expected ')' before ';' token
+ #define ZERO 0x30;
+                  ^
+../source/LCDFunctions.c:114:7: note: in expansion of macro 'ZERO'
+    if(ZERO > unidadAlarma){
+       ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+make: *** [source/LCDFunctions.o] Error 1
+10:38:27 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/main.c
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/main.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:39:37 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:39:44 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:42:00 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:42:12 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:43:46 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:43:53 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:45:57 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:46:45 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14808 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14800	      8	   8408	  23216	   5ab0	practica2.axf
+ 
+10:46:52 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:48:48 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:48:56 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+10:50:24 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:501:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:500:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+10:50:30 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+11:24:45 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:519:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:518:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+11:24:52 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+13:43:26 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/main.c
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:532:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:531:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/main.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14788 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14780	      8	   8408	  23196	   5a9c	practica2.axf
+ 
+13:43:33 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+13:46:18 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:532:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:531:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/main.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14800 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14792	      8	   8408	  23208	   5aa8	practica2.axf
+ 
+13:46:26 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:29:19 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:568:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:567:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/main.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
+14:29:29 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:33:52 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:567:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:566:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
+14:34:01 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:37:03 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:567:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:566:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
+14:37:10 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+make: Nothing to be done for `all'.
+14:49:15 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:562:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:561:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/main.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
+14:49:45 **** Incremental Build of configuration Debug for project practica2 ****
+make -r -j3 all 
+Building file: ../source/LCDFunctions.c
+Building file: ../source/LCDNokia5110.c
+Building file: ../source/main.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/main.d" -MT"source/main.o" -MT"source/main.d" -o "source/main.o" "../source/main.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDNokia5110.d" -MT"source/LCDNokia5110.o" -MT"source/LCDNokia5110.d" -o "source/LCDNokia5110.o" "../source/LCDNokia5110.c"
+arm-none-eabi-gcc -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -D__REDLIB__ -I"/Sistemas_Embebidos/Practica2/practica2/source" -I"/Sistemas_Embebidos/Practica2/practica2" -I"/Sistemas_Embebidos/Practica2/practica2/startup" -I"/Sistemas_Embebidos/Practica2/practica2/CMSIS" -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12 -I/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/LCDFunctions.d" -MT"source/LCDFunctions.o" -MT"source/LCDFunctions.d" -o "source/LCDFunctions.o" "../source/LCDFunctions.c"
+In file included from ../source/LCDNokia5110.c:9:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+In file included from ../source/main.c:18:0:
+../source/SPI.h:111:13: warning: 'SPI_enable' declared 'static' but never defined [-Wunused-function]
+ static void SPI_enable(SPI_ChannelType);
+             ^
+../source/SPI.h:113:13: warning: 'SPI_clk' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clk(SPI_ChannelType);
+             ^
+../source/SPI.h:115:13: warning: 'SPI_setMaster' declared 'static' but never defined [-Wunused-function]
+ static void SPI_setMaster(SPI_ChannelType channel, SPI_MasterType masterOrSlave);
+             ^
+../source/SPI.h:117:13: warning: 'SPI_fIFO' declared 'static' but never defined [-Wunused-function]
+ static void SPI_fIFO(SPI_ChannelType channel, SPI_EnableFIFOType enableOrDisable);
+             ^
+../source/SPI.h:119:13: warning: 'SPI_clockPolarity' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPolarity(SPI_ChannelType channel, SPI_PolarityType cpol);
+             ^
+../source/SPI.h:121:13: warning: 'SPI_frameSize' declared 'static' but never defined [-Wunused-function]
+ static void SPI_frameSize(SPI_ChannelType channel, uint32 frameSize);
+             ^
+../source/SPI.h:123:13: warning: 'SPI_clockPhase' declared 'static' but never defined [-Wunused-function]
+ static void SPI_clockPhase(SPI_ChannelType channel, SPI_PhaseType cpha);
+             ^
+../source/SPI.h:125:13: warning: 'SPI_baudRate' declared 'static' but never defined [-Wunused-function]
+ static void SPI_baudRate(SPI_ChannelType channel, uint32 baudRate);
+             ^
+../source/SPI.h:127:13: warning: 'SPI_mSBFirst' declared 'static' but never defined [-Wunused-function]
+ static void SPI_mSBFirst(SPI_ChannelType channel, SPI_LSMorMSBType msb);
+             ^
+../source/LCDFunctions.c: In function 'convierteAFahrenheit':
+../source/LCDFunctions.c:562:8: warning: unused variable 'counter' [-Wunused-variable]
+  float counter;
+        ^
+../source/LCDFunctions.c:561:15: warning: variable 'tempFahrDecimal' set but not used [-Wunused-but-set-variable]
+  static uint8 tempFahrDecimal = 0;
+               ^
+Finished building: ../source/LCDNokia5110.c
+ 
+Finished building: ../source/LCDFunctions.c
+ 
+Finished building: ../source/main.c
+ 
+Building target: practica2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="practica2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T practica2_Debug.ld -o "practica2.axf"  ./startup/startup_mk64f12.o  ./source/GPIO.o ./source/GlobalFunctions.o ./source/LCDFunctions.o ./source/LCDNokia5110.o ./source/NVIC.o ./source/SPI.o ./source/flextimer.o ./source/main.o ./source/motor2.o ./source/pwm.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       14792 B         1 MB      1.41%
+      SRAM_UPPER:        8416 B       192 KB      4.28%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: practica2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "practica2.axf"; # arm-none-eabi-objcopy -v -O binary "practica2.axf" "practica2.bin" ; # checksum -p MK64FN1M0xxx12 -d "practica2.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14784	      8	   8408	  23200	   5aa0	practica2.axf
+ 
