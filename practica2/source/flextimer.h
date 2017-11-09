@@ -1,12 +1,18 @@
-/*
- * flextimer.h
- *
- *  Created on: Oct 25, 2017
- *      Author: Santos
+/**
+	\file
+	\brief
+		This is the header file for the FlexTimer divice driver.
+	\author J. Luis Pizano Escalante, luispizano@iteso.mx
+	\date	7/09/2014
+	\todo
+	    Add configuration structures.
  */
 
 #ifndef FLEXTIMER_H_
 #define FLEXTIMER_H_
+
+
+#include "MK64F12.h"
 
 #include "DataTypeDefinitions.h"
 
@@ -180,6 +186,7 @@ uint8 FTM_irqStatus(FTM_ChannelType channel);
 BooleanType FALSE_FTM_0();
 BooleanType FALSE_FTM_1();
 BooleanType FALSE_FTM_2();
+
 
 
 

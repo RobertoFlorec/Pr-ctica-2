@@ -1,11 +1,18 @@
-/*
- * flextimer.c
- *
- *  Created on: Oct 25, 2017
- *      Author: Santos
+/**
+	\file
+	\brief
+		This is the starter file of FlexTimer.
+		In this file the FlexTimer is configured in overflow mode.
+	\author J. Luis Pizano Escalante, luispizano@iteso.mx
+	\date	7/09/2014
+	\todo
+	    Add configuration structures.
  */
 
-
+#include "FlexTimer.h"
+#include "MK64F12.h"
+#include "GPIO.h"
+#include "NVIC.h"
 
 #include "FlexTimer.h"
 #include "MK64F12.h"

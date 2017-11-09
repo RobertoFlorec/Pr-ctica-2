@@ -1,0 +1,28 @@
+/**
+	\file 
+	\brief 
+		This is a
+	\author Roberto Flores Carrillo, ie674145@iteso.mx
+			René Santos, ie@iteso.mx
+	\date	28/10/2017
+ */
+
+#include "LCDNokia5110.h"
+#include "FlexTimer.h"
+
+int main(void)
+{
+	PWMInit();
+	buttonsInit();
+	SPI_init(&SPI_Config); /*! Configuration function for the LCD port*/
+	LCDNokia_init(); /*! Configuration function for the LCD */
+	LCDNokia_clear();
+	EnableInterrupts;
+	pantallaInicial();
+
+
+	while(1){
+		LCDsystem();
+	}
+	return 0;
+}

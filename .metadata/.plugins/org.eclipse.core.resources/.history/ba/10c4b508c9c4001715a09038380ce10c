@@ -1,0 +1,53 @@
+/**
+	\file 
+	\brief 
+		This is a
+	\author Roberto Flores Carrillo, ie674145@iteso.mx
+			René Santos, ie@iteso.mx
+	\date	28/10/2017
+ */
+
+#include "SPI.h"
+#include "GPIO.h"
+#include "DatatypeDefinitions.h"
+#include "LCDNokia5110.h"
+#include "GlobalFunctions.h"
+#include "SPI.h"
+#include <stdio.h>
+/** \brief This is the configuration structure to configure the LCD.
+ * Note that is constants and it is because is only a variable used for configuration*/
+const SPI_ConfigType SPI_Config={SPI_DISABLE_FIFO,
+							SPI_LOW_POLARITY,
+							SPI_LOW_PHASE,
+							SPI_MSB,
+							SPI_0,
+							SPI_MASTER,
+							GPIO_MUX2,
+							SPI_BAUD_RATE_2,
+							SPI_FSIZE_8,
+							{GPIO_D,BIT1,BIT2}};
+/*! This array hold the initial picture that is shown in the LCD*/
+
+uint8 flagC = FALSE;
+BooleanType flagIncr = FALSE;
+BooleanType flagAl = FALSE;
+BooleanType flagTemp = FALSE;
+BTNType Btn;
+
+uint32 pressedBtn = 0;
+BtnFlagType BtnFlag;
+
+buttonsInit();
+SPI_init(&SPI_Config); /*! Configuration function for the LCD port*/
+LCDNokia_init(); /*! Configuration function for the LCD */
+LCDNokia_clear();
+EnableInterrupts;
+
+int main(void){
+
+	pantallaInicial();
+	while(1){
+		LCDsystem();
+	}
+	return 0;
+}

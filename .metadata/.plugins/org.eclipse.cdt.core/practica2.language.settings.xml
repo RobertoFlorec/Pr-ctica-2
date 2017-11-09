@@ -116,6 +116,34 @@
 						<entry kind="macro" name="__REDLIB__" value=""/>
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
+					<resource project-relative-path="source/PWM.c">
+						<entry kind="includePath" name="/${ProjName}/source">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/startup">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/CMSIS">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices"/>
+						<entry kind="macro" name="CPU_MK64FN1M0VLL12" value=""/>
+						<entry kind="macro" name="CPU_MK64FN1M0VLL12_cm4" value=""/>
+						<entry kind="macro" name="CR_INTEGER_PRINTF" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="FSL_RTOS_BM" value=""/>
+						<entry kind="macro" name="SDK_DEBUGCONSOLE" value="0"/>
+						<entry kind="macro" name="SDK_OS_BAREMETAL" value=""/>
+						<entry kind="macro" name="__MCUXPRESSO" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value=""/>
+					</resource>
 					<resource project-relative-path="startup/startup_mk64f12.c">
 						<entry kind="includePath" name="/${ProjName}/source">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -201,6 +229,34 @@
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
 					<resource project-relative-path="source/GlobalFunctions.c">
+						<entry kind="includePath" name="/${ProjName}/source">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/startup">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/CMSIS">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS/Include"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/CMSIS"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices/MK64F12"/>
+						<entry kind="includePath" name="/Users/Roberto/mcuxpresso/SDKPackages/SDK_2/devices"/>
+						<entry kind="macro" name="CPU_MK64FN1M0VLL12" value=""/>
+						<entry kind="macro" name="CPU_MK64FN1M0VLL12_cm4" value=""/>
+						<entry kind="macro" name="CR_INTEGER_PRINTF" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="FSL_RTOS_BM" value=""/>
+						<entry kind="macro" name="SDK_DEBUGCONSOLE" value="0"/>
+						<entry kind="macro" name="SDK_OS_BAREMETAL" value=""/>
+						<entry kind="macro" name="__MCUXPRESSO" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value=""/>
+					</resource>
+					<resource project-relative-path="source/FlexTimer.c">
 						<entry kind="includePath" name="/${ProjName}/source">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
