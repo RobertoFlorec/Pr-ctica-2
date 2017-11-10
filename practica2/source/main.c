@@ -11,6 +11,8 @@
 
 int main(void)
 {
+	/**Initializes system. Calls all functions,
+	 * variables and values needed for the system to work correctly */
 	LCDsystem();
 	return 0;
 }

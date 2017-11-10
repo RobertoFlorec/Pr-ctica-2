@@ -11,6 +11,7 @@
 #include "LCDNokia5110.h"
 #include "GlobalFunctions.h"
 #include "FlexTimer.h"
+#include "ADC.h"
 #include <stdio.h>
 
 uint8 flagC = FALSE;
@@ -24,9 +25,7 @@ static uint8 decenaIncre = ONE;
 static uint8 unidadIncre = FIVE;
 static uint8 decenaTemperatura = THREE;
 static uint8 unidadTemperatura = THREE;
-static uint8 primerDecimal = ZERO;
-static uint8 segundoDecimal = ZERO;
-static BooleanType flagCelcius = FALSE;
+static BooleanType flagCelcius = TRUE;
 static BooleanType flagFahrenheit = FALSE;
 static BooleanType flagSave = FALSE;
 static BooleanType flag100 = FALSE;
@@ -35,10 +34,22 @@ static BooleanType controlManualON = FALSE;
 static BooleanType controlManualFlag = FALSE;
 static BooleanType incremento = FALSE;
 static BooleanType flagFormato = FALSE;
-static sint16 dutyCycle = 219;
-
+volatile sint16 dutyCycle = 219;
+static uint8 decenaCtrlManual;
+static uint8 unidadCtrlManual;
+volatile uint8 temperaturaADC = 0;
+volatile uint8 temperature = 0;
+static uint8 temperaturaAux = 0;
+uint8 alarmaUmbral = 30;
+float temperaturaFahrenheit = 0.0;
+uint8 temperaturaCelcius = 0;
+uint8 newFlag = 0;
+BooleanType bandera = FALSE;
+uint8 temperaturaUmbral = 0;
 BtnFlagType BtnFlag;
 
+
+/**SPI configuration values*/
 const SPI_ConfigType SPI_Config={SPI_DISABLE_FIFO,
 							SPI_LOW_POLARITY,
 							SPI_LOW_PHASE,
@@ -49,6 +60,16 @@ const SPI_ConfigType SPI_Config={SPI_DISABLE_FIFO,
 							SPI_BAUD_RATE_2,
 							SPI_FSIZE_8,
 							{GPIO_D,BIT1,BIT2}};
+
+/**ADC configuration values*/
+const ADC_ConfigType ADC_Config={
+	ADC_0,
+	BITMODE_8_9,
+	DADP1,
+	SAMPLES_32,
+	AVERAGE_ENABLE,
+	INTERRUPT_ENABLE
+};
 
 static const uint8 ASCII[][5] =
 {
@@ -161,8 +182,6 @@ void LCDNokia_init(void) {
 	GPIO_clockGating(GPIO_D);
 	GPIO_dataDirectionPIN(GPIO_D,GPIO_OUTPUT,RESET_PIN);
 	GPIO_pinControlRegister(GPIO_D,RESET_PIN,&pinControlRegister);
-  //Configure control pins
-	
 
 	GPIO_clearPIN(GPIO_D, RESET_PIN);
 	LCD_delay();
@@ -234,7 +253,9 @@ void LCD_delay(void)
 }
 
 void LCDsystem(void){
- 	BtnFlag.BTN0_flag = FALSE;
+
+	/**Flags to let know when a button has been pressed*/
+	BtnFlag.BTN0_flag = FALSE;
 	BtnFlag.BTN1_flag = FALSE;
 	BtnFlag.BTN2_flag = FALSE;
 	BtnFlag.BTN3_flag = FALSE;
@@ -242,111 +263,195 @@ void LCDsystem(void){
 	BtnFlag.BTN5_flag = FALSE;
 	BtnFlag.BTN_flag = FALSE;
 
-	//PWMInit();
 
-	buttonsInit();
-	SPI_init(&SPI_Config); /*! Configuration function for the LCD port*/
+	/****************************************/
+	/********INITIALIZATIONS*****************/
+	/***************************************/
+
+	buttonsInit();/*! Configuration for the push buttons*/
+	SPI_init(&SPI_Config); /*! SPI configuration function for the LCD port*/
 	LCDNokia_init(); /*! Configuration function for the LCD */
-	LCDNokia_clear();
-	//FTM0->CONTROLS[7].CnV  = 0x108 & FTM_CnV_VAL_MASK;
+	LCDNokia_clear();/*! Makes sure the LCD has nothing written on*/
+	ADC_init(&ADC_Config);/*! The ADC configuration is set on, for temperature reading*/
+	config_SW_PWM();/*! Configures the pin to be used by the PWM*/
+	init_PWM();/*! Configures the Flex Timer to be use as PWM*/
+	BuzzerInit();/*! Configure the pin to be use to set the alarm ON and OFF*/
+
 	EnableInterrupts;
+	pantallaInicial();/*! First call to the main screen*/
 
-	config_SW_PWM();
-		init_PWM();
-	pantallaInicial();
+	while(1) {
 
-		while(1) {
+		/**This variables get the push buttons values*/
+		Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
+		Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
+		Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
+		Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
+		Btn.BTN4 = GPIO_readPIN(GPIO_C, BIT17);
+		Btn.BTN5 = GPIO_readPIN(GPIO_C, BIT16);
 
-			/**This variables get the push buttons values*/
-			Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
-			Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
-			Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
-			Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
-			Btn.BTN4 = GPIO_readPIN(GPIO_C, BIT17);
-			Btn.BTN5 = GPIO_readPIN(GPIO_C, BIT16);
+		/**If push button 0 is pressed*/
+		 if(FALSE == Btn.BTN0){
+			 clearFlagC(); /*!Clears the interruption flag, to use it again later*/
+			 BtnFlag.BTN0_flag = TRUE;/*!Turns on the button 0 flag, to indicate Button 0 has been pressed*/
+			 BtnFlag.BTN_flag = TRUE;/*! Indicates that the system is in the menu screen*/
+			 BtnFlag.BTN1_flag = FALSE;/*! Clears Button 1 flag*/
+			 BtnFlag.BTN2_flag = FALSE;/*! Clears Button 2 flag*/
+			 BtnFlag.BTN3_flag = FALSE;/*! Clears Button 3 flag*/
+			 BtnFlag.BTN4_flag = FALSE;/*! Clears Button 4 flag*/
+			 BtnFlag.BTN5_flag = FALSE;/*! Clears Button 5 flag*/
+//			 bandera = TRUE;
+//			 newFlag++;
+			 LCDNokia_clear();
+			 menu();/*! Calls the menu screen settings*/
+		 }
 
-			//while(!flagC){
-			//	FTM_updateCnValue(FTM_0,CHANNEL_7,0x108);
-				//FTM0->CONTROLS[7].CnV  = 0x108 & FTM_CnV_VAL_MASK;
+		 /**When Button 1 is pressed, after been in the menu screen*/
+		 else if(FALSE == Btn.BTN1 && BtnFlag.BTN_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
+			 clearFlagC();/*! Clears the port interrupt flag*/
+//			 newFlag--;
+			 BtnFlag.BTN1_flag = TRUE;/*! Indicates Button 1 has been pressed*/
+			 flagAl = TRUE;/*! Ensures the next screen is entered with no effect caused by the button pressing*/
+			 LCDNokia_clear();
+			 pantallaAlarma();/*! Sets the alarm screen settings*/
+		 }
+		 /**When Button 2 is pressed, after been in the menu screen*/
+		 else if(FALSE == Btn.BTN2 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
+			 clearFlagC();/*! Clears the port interrupt flag*/
+//			 newFlag--;
+			 BtnFlag.BTN2_flag = TRUE;/*! Indicates Button 2 has been pressed*/
+			 flagTemp = TRUE;/*! Ensures*/
+			 LCDNokia_clear();
+			 pantallaFormatoTemp();/*! Sets the temperature format screen settings*/
+		 }
+		 else if(FALSE == Btn.BTN3 && BtnFlag.BTN_flag  && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
+			 clearFlagC();
+//			 newFlag--;
+			 flagIncr = TRUE;
+			 BtnFlag.BTN3_flag = TRUE;
+			 LCDNokia_clear();
+			 pantallaDecremento();
+		 }
+		 else if(FALSE == Btn.BTN4 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN5_flag){
+			 clearFlagC();
+			 newFlag--;
+			 BtnFlag.BTN4_flag = TRUE;
+			 LCDNokia_clear();
+			 pantallaCtrlManual();
+		 }
+		 else if(FALSE == Btn.BTN5 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag){
+			 clearFlagC();
+			 newFlag--;
+			 BtnFlag.BTN5_flag = TRUE;
+			 LCDNokia_clear();
+			 pantallaFrecuancia();
+		 }
 
-		//	}
-
-			/**If push button 0 is pressed*/
-				 if(FALSE == Btn.BTN0){
-					 clearFlagC(); /**Clears the interruption flag, to use it again later*/
-					 BtnFlag.BTN0_flag = TRUE;/**Turns on the button 0 flag, to indicate */
-					 BtnFlag.BTN_flag = TRUE;
-					 BtnFlag.BTN1_flag = FALSE;
-					 BtnFlag.BTN2_flag = FALSE;
-					 BtnFlag.BTN3_flag = FALSE;
-					 BtnFlag.BTN4_flag = FALSE;
-					 BtnFlag.BTN5_flag = FALSE;
-					 LCDNokia_clear();
-					 menu();
-				 }
-				 else if(FALSE == Btn.BTN1 && BtnFlag.BTN_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
-					 clearFlagC();
-					 BtnFlag.BTN1_flag = TRUE;
-					 flagAl = TRUE;
-					 LCDNokia_clear();
-					 pantallaAlarma();
-				 }
-				 else if(FALSE == Btn.BTN2 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
-					 clearFlagC();
-					 BtnFlag.BTN2_flag = TRUE;
-					 flagTemp = TRUE;
-					 LCDNokia_clear();
-					 pantallaFormatoTemp();
-				  }
-				 else if(FALSE == Btn.BTN3 && BtnFlag.BTN_flag  && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN4_flag && !BtnFlag.BTN5_flag){
-					 clearFlagC();
-					 flagIncr = TRUE;
-					 BtnFlag.BTN3_flag = TRUE;
-					 LCDNokia_clear();
-				 	 pantallaDecremento();
-				 }
-				 else if(FALSE == Btn.BTN4 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN5_flag){
-					 clearFlagC();
-					 BtnFlag.BTN4_flag = TRUE;
-					 LCDNokia_clear();
-					 pantallaCtrlManual();
-				 }
-				 else if(FALSE == Btn.BTN5 && BtnFlag.BTN_flag && !BtnFlag.BTN1_flag && !BtnFlag.BTN2_flag && !BtnFlag.BTN3_flag && !BtnFlag.BTN4_flag){
-					 clearFlagC();
-					 BtnFlag.BTN5_flag = TRUE;
-					 LCDNokia_clear();
-				 	 pantallaFrecuancia();
-				 }
-
-		}
+	}
 }
 
 void pantallaInicial(void){
 	/**Initializes the first screen setup*/
 	uint8 velocidad[]="Velocidad";
-	uint8 porcentaje[] = " %";
+	uint8 porcentaje[] = "%";
 	uint8 temperatura[]="Temperatura";
-	uint8 centigrados[] = "' C";
+	uint8 centigrados[] = "'C";
+
+	uint8 porcentajeCtrlManual = (((dutyCycle - 76) / 9) * 5) + 5;
+	decenaCtrlManual = getDecena(porcentajeCtrlManual);
+	unidadCtrlManual = getUnidad(porcentajeCtrlManual);
+
+
+//	temperaturaADC = ADC_read(ADC_Config.ADC_Channel);
+//	temperature = (uint8)(temperaturaADC * (3.3 / 255) * 100);
+//	temperaturaAux = temperature;
+
+//	while(1){
+//	uint8 counter = 0;
+//	temperaturaADC = ADC_read(ADC_Config.ADC_Channel);
+//	temperature = (uint8)(temperaturaADC * (3.3 / 255) * 100);
+
+//	temperaturaAux = temperature; //Variable para saber si la temperatura aumenta dos grados
+//	uint8 decenaTemperatura = getDecena(temperature);
+//	uint8 unidadTemperatura = getUnidad(temperature);
+
+	uint8 decenaTemperatura = TWO;
+	uint8 unidadTemperatura = FIVE;
 
 	/**The next sentences are to print the first screen*/
 	LCDNokia_clear();
 	LCDNokia_gotoXY(10,1);
 	LCDNokia_sendString(velocidad);
-	LCDNokia_gotoXY(20,2);
+	LCDNokia_gotoXY(30,2);
+	LCDNokia_sendChar(decenaCtrlManual);
+	LCDNokia_gotoXY(36,2);
+	LCDNokia_sendChar(unidadCtrlManual);
+	LCDNokia_gotoXY(42,2);
 	LCDNokia_sendString(porcentaje);
 	LCDNokia_gotoXY(5,3);
 	LCDNokia_sendString(temperatura);
-	LCDNokia_gotoXY(20,4);
+	LCDNokia_gotoXY(30,4);
+	LCDNokia_sendChar(decenaTemperatura);
+	LCDNokia_gotoXY(36,4);
+	LCDNokia_sendChar(unidadTemperatura);
+	LCDNokia_gotoXY(42,4);
 	LCDNokia_sendString(centigrados);
+
+
+
+
+	temperaturaAux += 2;
+		if(temperaturaAux == temperature){
+			temperaturaAux += 2;
+			printf("\nDisminuye");
+
+			printf("\ndutyCycle antes: %d", dutyCycle);
+			temperaturaUmbral = getInt(decenaIncre, unidadIncre);
+//			temperaturaUmbral = 50;
+			dutyCycle = dutyCycle - ((temperaturaUmbral/5) * 9);
+			if(85 > dutyCycle){
+				dutyCycle = 85;
+			}
+			printf("\ndutyCycle despues: %d", dutyCycle);
+
+			//			do{
+//				dutyCycle -= 9;
+//				counter++;
+//			}while((temperaturaUmbral/5) > counter);
+//
+			FTM_updateCnValue(FTM_0, CHANNEL_7, dutyCycle);
+
+
+		}else{
+			temperaturaAux -= 2;
+		}
+//	}
 }
 
 void menu(void){
+
+	if(alarmaUmbral <= temperature){
+		GPIO_setPIN(GPIO_B, BIT23);
+	}else if(alarmaUmbral > temperature){
+		GPIO_clearPIN(GPIO_B, BIT23);
+	}
+
+
+	/**Condicion para checar si la temperatura sube 2 grados, no funciona*/
+	temperaturaAux += 2;
+	if(temperaturaAux == temperature){
+		temperaturaAux += 2;
+		printf("\nDisminuye");
+	}else{
+		temperaturaAux -= 2;
+	}
+
 	/**Initializes the main menu setup*/
-	uint8 alarma[] = "1) Alarma";
-	uint8 formato[] = "2) Formato temp";
-	uint8 porcentajeInc[] = "3) % de inc";
-	uint8 controlManual[] = "4) Ctrl manual";
-	uint8 frecuenciometro[] = "5) Frecuenciometro";
+	uint8 alarma[] = "1)Alarma";
+	uint8 formato[] = "2)Formato temp";
+	uint8 porcentajeInc[] = "3)% de inc";
+	uint8 controlManual[] = "4)Ctrl manual";
+	uint8 frecuenciometro[] = "5)Frecuenciometro";
 
 	/**The next sentences are to print the main menu*/
 	LCDNokia_gotoXY(0,0);
@@ -359,10 +464,11 @@ void menu(void){
 	LCDNokia_sendString(controlManual);
 	LCDNokia_gotoXY(0,4);
 	LCDNokia_sendString(frecuenciometro);
+//	}
 }
 
 void pantallaAlarma(void){
-	/**Initializes the main alarm menu*/
+	/**Initializes the main alarm menu strings*/
 	uint8 alarma[] = "Alarma";
 	uint8 control[] = "(-)B1 (+)B2";
 	uint8 control2[] = "(ok)B3";
@@ -374,6 +480,7 @@ void pantallaAlarma(void){
 	uint8 decenaTemp = decenaAlarma;
 	uint8 unidadTemp = unidadAlarma;
 
+	/** If temperature format */
 	if(flagFormato){
 		uint8 alarmaCelcius = getInt(decenaAlarma, unidadAlarma);
 		float alarmaFahrenheit = (alarmaCelcius * 1.8) + 32;
@@ -465,17 +572,17 @@ void pantallaAlarma(void){
 	LCDNokia_gotoXY(20,0);
 	LCDNokia_sendString(alarma);
 	LCDNokia_gotoXY(35,2);
-		LCDNokia_sendChar(decenaTemperatura);
-		LCDNokia_gotoXY(41,2);
-		LCDNokia_sendChar(unidadTemperatura);
-		LCDNokia_gotoXY(47,2);
-		LCDNokia_sendChar(punto);
-		LCDNokia_gotoXY(50,2);
-		LCDNokia_sendChar(primerDecimal);
-		LCDNokia_gotoXY(56,2);
-		LCDNokia_sendChar(segundoDecimal);
-		LCDNokia_gotoXY(62,2);
-		LCDNokia_sendString(fahrenheit);
+	LCDNokia_sendChar(decenaTemperatura);
+	LCDNokia_gotoXY(41,2);
+	LCDNokia_sendChar(unidadTemperatura);
+	LCDNokia_gotoXY(47,2);
+	LCDNokia_sendChar(punto);
+	LCDNokia_gotoXY(50,2);
+	LCDNokia_sendChar(primerDecimal);
+	LCDNokia_gotoXY(56,2);
+	LCDNokia_sendChar(segundoDecimal);
+	LCDNokia_gotoXY(62,2);
+	LCDNokia_sendString(fahrenheit);
 	LCDNokia_gotoXY(5,3);
 	LCDNokia_sendString(control);
 	LCDNokia_gotoXY(15,4);
@@ -506,6 +613,7 @@ void pantallaAlarma(void){
 				decenaAlarma = decenaTemp;
 				unidadAlarma = unidadTemp;
 			}
+			alarmaUmbral = getInt(decenaAlarma, unidadAlarma);
 			break;
 		}
 		/**When BNT1 is pressed the threshold value decreases,
@@ -577,47 +685,77 @@ void pantallaAlarma(void){
 	}
 }
 
+
 void pantallaFormatoTemp(void){
 	uint8 formato[] = "Formato temp";
 	uint8 temp[] = "Temp= ";
 	uint8 celcius[] = "'C";
+	uint8 fahrenheit[] = "'F";
 	uint8 control[] = "(C)B1(F)B2";
 	uint8 control2[] = "(ok)B3";
+	uint8 contador = 0;
+	uint8 arreglo[10];
+	uint8 tempTemp = 0;
 
-		while(1){
-			/**Reads the input of each button*/
-			Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
-			Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
-			Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
-			Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
-			if(FALSE == Btn.BTN0){
-				break;
-			}
-			if((FALSE == Btn.BTN1)){
-				flagCelcius = TRUE;
-				flagFahrenheit = FALSE;
-				convierteACelcius(decenaTemperatura, unidadTemperatura, primerDecimal, segundoDecimal);
-				delay(65000);
-			}
-			if((FALSE == Btn.BTN2 && !flagTemp)){
-				flagFahrenheit = TRUE;
-				flagCelcius = FALSE;
-				convierteAFahrenheit(decenaTemperatura, unidadTemperatura);
-				delay(65000);
-			}
-			if(FALSE == Btn.BTN3){
-				if(flagFahrenheit){
-					flagFormato = TRUE;
-				}else if(!flagFahrenheit){
-					flagFormato = FALSE;
-				}
-				break;
-			}
-			if(Btn.BTN2 && flagTemp){
-				flagTemp = FALSE;
-			}
+	for(contador = 0; contador < 10; contador++){
+		temperaturaADC = ADC_read(ADC_Config.ADC_Channel);
+		temperature = (uint8)(temperaturaADC * (3.3 / 255) * 100);
+		arreglo[contador] = temperature;
+	}
 
+	for(contador = 0; contador < 10; contador++){
+		tempTemp += arreglo[contador];
+	}
 
+	temperaturaAux = temperature;
+	uint8 decenaTemperatura = getDecena(tempTemp / 10);
+	uint8 unidadTemperatura = getUnidad(tempTemp /10);
+
+	while(1){
+		/**Reads the input of each button*/
+		Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
+		Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
+		Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
+		Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
+
+		if(FALSE == Btn.BTN0){
+			break;
+		}
+
+		if((FALSE == Btn.BTN1)){
+			flagCelcius = TRUE;
+//			flagFahrenheit = FALSE;
+			if(flagFahrenheit){
+			temperaturaCelcius = convierteACelcius(temperaturaFahrenheit);
+			}
+			delay(65000);
+		}
+
+		if((FALSE == Btn.BTN2 && !flagTemp)){
+			flagFahrenheit = TRUE;
+			flagCelcius = FALSE;
+			temperaturaFahrenheit = convierteAFahrenheit(temperature);
+			delay(65000);
+		}
+
+		if(FALSE == Btn.BTN3){
+			if(flagFahrenheit){
+				flagFormato = TRUE;
+			}
+			else if(!flagFahrenheit){
+				flagFormato = FALSE;
+			}
+			break;
+		}
+
+		if(Btn.BTN2 && flagTemp){
+			flagTemp = FALSE;
+		}
+
+		if(flagCelcius){
+			decenaTemperatura = getDecena(temperaturaCelcius);
+			unidadTemperatura = getUnidad(temperaturaCelcius);
+			LCDNokia_clear();
 			LCDNokia_gotoXY(0,0);
 			LCDNokia_sendString(formato);
 			LCDNokia_gotoXY(10,2);
@@ -633,6 +771,38 @@ void pantallaFormatoTemp(void){
 			LCDNokia_gotoXY(20,5);
 			LCDNokia_sendString(control2);
 		}
+		else if(flagFahrenheit){
+			uint8 primerDecimal = 0;
+			uint8 segundoDecimal = 0;
+			uint8 enterosFahrenheit = (uint8)temperaturaFahrenheit;
+			uint8 decimalesFahrenheit = (uint8)((temperaturaFahrenheit - enterosFahrenheit) * 100);
+			decenaTemperatura = getDecena(enterosFahrenheit);
+			unidadTemperatura = getUnidad(enterosFahrenheit);
+			primerDecimal = getDecena(decimalesFahrenheit);
+			segundoDecimal = getDecena(decimalesFahrenheit);
+			LCDNokia_clear();
+			LCDNokia_gotoXY(0,0);
+			LCDNokia_sendString(formato);
+			LCDNokia_gotoXY(0,2);
+			LCDNokia_sendString(temp);
+			LCDNokia_gotoXY(40,2);
+			LCDNokia_sendChar(decenaTemperatura);
+			LCDNokia_gotoXY(46,2);
+			LCDNokia_sendChar(unidadTemperatura);
+			LCDNokia_gotoXY(52,2);
+			LCDNokia_sendChar(PUNTO);
+			LCDNokia_gotoXY(55,2);
+			LCDNokia_sendChar(primerDecimal);
+			LCDNokia_gotoXY(61,2);
+			LCDNokia_sendChar(segundoDecimal);
+			LCDNokia_gotoXY(67,2);
+			LCDNokia_sendString(fahrenheit);
+			LCDNokia_gotoXY(5,4);
+			LCDNokia_sendString(control);
+			LCDNokia_gotoXY(20,5);
+			LCDNokia_sendString(control2);
+		}
+	}
 }
 
 void pantallaDecremento(void){
@@ -765,8 +935,6 @@ void pantallaDecremento(void){
 
 void pantallaCtrlManual(void){
 
-//	FlexTimer_updateCHValue(dutyCycle);
-//	delay(20000);
 	/**Initializes the CtrlManual menu setup*/
 	uint8 ctrlManual[] = "Ctrl Manual";
 	uint8 porcentaje[] = " %";
@@ -776,10 +944,10 @@ void pantallaCtrlManual(void){
 	uint8 controlMenos[] = "(-)B4";
 	uint8 controlMas[] = "(+)B5";
 
-	/**saves the actual values of the alarm to return to them in case the new values are not saved*/
-	uint8 decenaTemp = decenaIncre;
-	uint8 unidadTemp = unidadIncre;
+	 uint8 porcentajePWM = (((dutyCycle - 76) / 9) * 5) + 5;
 
+	decenaCtrlManual = getDecena(porcentajePWM);
+	unidadCtrlManual = getUnidad(porcentajePWM);
 	while(1){
 
 		/**Reads the input of each button*/
@@ -792,14 +960,6 @@ void pantallaCtrlManual(void){
 
 		/**When BTN0 is pressed, the system return to main menu screen*/
 		if(FALSE == Btn.BTN0){
-			/**When BTN3 is pressed, the value of the increase/decrease stays as selected*/
-			if(flagSaveIncr){
-				flagSaveIncr = FALSE;
-			/**If BTN3 is not pressed, the increase/decrease value returns to the same as it was*/
-			}else{
-				decenaIncre = decenaTemp;
-				unidadIncre = unidadTemp;
-			}
 			break;
 		}
 		/**controlManualON flag indicates the manual control should be activated*/
@@ -828,22 +988,22 @@ void pantallaCtrlManual(void){
 			if(flag100){
 				LCDNokia_gotoXY(23,1);
 				LCDNokia_sendChar(PUNTO);
-				decenaIncre = 0x3A;
+				decenaCtrlManual = 0x3A;
 				flag100 = FALSE;
 			}
 			/**Decreases value by 5*/
-			unidadIncre -= 5;
+			unidadCtrlManual -= 5;
 			/**When the units value gets below 0, it return to 5
 			 * and the tenths decreases by one*/
-			if(ZERO > unidadIncre){
-				decenaIncre -= 1;
-				unidadIncre = FIVE;
+			if(ZERO > unidadCtrlManual){
+				decenaCtrlManual -= 1;
+				unidadCtrlManual = FIVE;
 
 			}
 			/**This condition establishes a minimum value at 05%*/
-			if((ZERO >= decenaIncre) && (FIVE >= unidadIncre)){
-				decenaIncre = ZERO;
-				unidadIncre = FIVE;
+			if((ZERO >= decenaCtrlManual) && (FIVE >= unidadCtrlManual)){
+				decenaCtrlManual = ZERO;
+				unidadCtrlManual = FIVE;
 			}
 			/**This delay helps to get the BTNs values correctly*/
 			delay(65000);
@@ -854,20 +1014,18 @@ void pantallaCtrlManual(void){
 		}
 		/**When BTN5 is pressed and manual control is activated, increases by 5. Except when the value is 100*/
 		if((FALSE == Btn.BTN5 && !flag100 && controlManualFlag)){
-			unidadIncre += 5;
+			unidadCtrlManual += 5;
 			/**When the units value gets above 9, it returns to 0
 			 * and the tenths increases by one*/
-			if(NINE < unidadIncre){
-				decenaIncre += 1;
-				unidadIncre = ZERO;
-//				FTM_updateCnValue(FTM_0, CHANNEL_7, 219);
-
+			if(NINE < unidadCtrlManual){
+				decenaCtrlManual += 1;
+				unidadCtrlManual = ZERO;
 			}
 			/**This condition establishes a maximum value at 100,
 			 * and tells the system that it has hit 100*/
-			if((NINE < decenaIncre) && (ZERO == unidadIncre)){
-				decenaIncre = ZERO;
-				unidadIncre = ZERO;
+			if((NINE < decenaCtrlManual) && (ZERO == unidadCtrlManual)){
+				decenaCtrlManual = ZERO;
+				unidadCtrlManual = ZERO;
 				flag100 = TRUE;
 			}
 			/**This delay helps to get the BTNs values correctly*/
@@ -889,9 +1047,9 @@ void pantallaCtrlManual(void){
 		LCDNokia_gotoXY(5,0);
 		LCDNokia_sendString(ctrlManual);
 		LCDNokia_gotoXY(29,1);
-		LCDNokia_sendChar(decenaIncre);
+		LCDNokia_sendChar(decenaCtrlManual);
 		LCDNokia_gotoXY(35,1);
-		LCDNokia_sendChar(unidadIncre);
+		LCDNokia_sendChar(unidadCtrlManual);
 		LCDNokia_gotoXY(41,1);
 		LCDNokia_sendString(porcentaje);
 		LCDNokia_gotoXY(0,2);
@@ -957,107 +1115,25 @@ void clearFlagC(void){
 	flagC = FALSE;
 }
 
-void convierteACelcius(uint8 decenaTemperatura, uint8 unidadTemperatura, uint8 primerDecimal, uint8 segundoDecimal){
+
+uint8 convierteACelcius(float temperaturaFahrenheit){
 	flagFahrenheit = FALSE;
 
-	float tempFahrenheit = getFloat(decenaTemperatura, unidadTemperatura, primerDecimal, segundoDecimal);
-	uint8 tempCelcius = (uint8)((tempFahrenheit - 32)/1.8);
 
-	decenaTemperatura = getDecena(tempCelcius);
-	unidadTemperatura = getUnidad(tempCelcius);
-	flagFahrenheit = TRUE;
-	flagCelcius = FALSE;
+	uint8 tempCelcius = (uint8)((temperaturaFahrenheit - 32)/1.8);
 
-		uint8 formato[] = "Formato temp";
-		uint8 temp[] = "Temp= ";
-		uint8 celcius[] = "'C";
-		uint8 control[] = "(C)B1(F)B2";
-		uint8 control2[] = "(ok)B3";
-	while(flagCelcius){
-		/**Reads the input of each button*/
-		Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
-		Btn.BTN2 = GPIO_readPIN(GPIO_C, BIT8);
-		Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
-		if((FALSE == Btn.BTN2) | (FALSE == Btn.BTN3) | (FALSE == Btn.BTN0)){
-			break;
-		}
-	LCDNokia_clear();
-	LCDNokia_gotoXY(0,0);
-	LCDNokia_sendString(formato);
-	LCDNokia_gotoXY(0,2);
-	LCDNokia_sendString(temp);
-	LCDNokia_gotoXY(35,2);
-	LCDNokia_sendChar(decenaTemperatura);
-	LCDNokia_gotoXY(41,2);
-	LCDNokia_sendChar(unidadTemperatura);
-	LCDNokia_gotoXY(62,2);
-	LCDNokia_sendString(celcius);
-	LCDNokia_gotoXY(5,4);
-	LCDNokia_sendString(control);
-	LCDNokia_gotoXY(20,5);
-	LCDNokia_sendString(control2);
-	}
+	return tempCelcius;
 }
 
-void convierteAFahrenheit(uint8 decenaTemperatura, uint8 unidadTemperatura){
 
+float convierteAFahrenheit(uint8 tempCelcius){
 	flagCelcius = FALSE;
-	static float temperaturaFahrenheit = 0.0;
-	static uint8 tempFahrEntero = 0;
-	static uint8 tempFahrDecimal = 0;
-	static uint8 tempCelcius = 0;
+	float tempFahr = 0.0;
 
-		uint8 formato[] = "Formato temp";
-		uint8 temp[] = "Temp= ";
-		uint8 fahrenheit[] = "'F";
-		uint8 punto = 0x2E;
-		uint8 control[] = "(C)B1(F)B2";
-		uint8 control2[] = "(ok)B3";
+	tempFahr = (tempCelcius * 1.8) + 32;
 
-	tempCelcius = getInt(decenaTemperatura, unidadTemperatura);
-	temperaturaFahrenheit = ((tempCelcius) * 1.8) + 32;
-
-	tempFahrEntero = (uint8)temperaturaFahrenheit;
-	tempFahrDecimal = (uint8)((temperaturaFahrenheit - tempFahrEntero) * 100);
-
-
-	decenaTemperatura = getDecena(tempFahrEntero);
-	unidadTemperatura = getUnidad(tempFahrEntero);
-	primerDecimal = getDecena(tempFahrDecimal);
-	segundoDecimal = getUnidad(tempFahrDecimal);
-	LCDNokia_clear();
-while(flagFahrenheit){
-	/**Reads the input of each button*/
-			Btn.BTN0 = GPIO_readPIN(GPIO_C, BIT0);
-			Btn.BTN1 = GPIO_readPIN(GPIO_C, BIT9);
-			Btn.BTN3 = GPIO_readPIN(GPIO_C, BIT1);
-
-	if((FALSE == Btn.BTN1) | (FALSE == Btn.BTN3) | (FALSE == Btn.BTN0)){
-				break;
-			}
-		LCDNokia_gotoXY(0,0);
-		LCDNokia_sendString(formato);
-		LCDNokia_gotoXY(0,2);
-		LCDNokia_sendString(temp);
-		LCDNokia_gotoXY(35,2);
-		LCDNokia_sendChar(decenaTemperatura);
-		LCDNokia_gotoXY(41,2);
-		LCDNokia_sendChar(unidadTemperatura);
-		LCDNokia_gotoXY(47,2);
-		LCDNokia_sendChar(punto);
-		LCDNokia_gotoXY(50,2);
-		LCDNokia_sendChar(primerDecimal);
-		LCDNokia_gotoXY(56,2);
-		LCDNokia_sendChar(segundoDecimal);
-		LCDNokia_gotoXY(62,2);
-		LCDNokia_sendString(fahrenheit);
-		LCDNokia_gotoXY(5,4);
-		LCDNokia_sendString(control);
-		LCDNokia_gotoXY(20,5);
-		LCDNokia_sendString(control2);
-	}
+	return tempFahr;
 }
-
 
 uint8 getInt(uint8 Decenas, uint8 Unidades){
 	uint8 Entero = 0;
@@ -1359,3 +1435,9 @@ uint8 getUnidad(uint8 value){
 		break;
 	}
 }
+
+
+
+
+
+

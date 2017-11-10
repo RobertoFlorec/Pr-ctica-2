@@ -29,5 +29,6 @@ uint16 Porsentaje(uint32 Temperatura);
 uint8 Umbral();
 sint16 incrementaPWM(sint16 dutyCycle);
 sint16 decrementaPWM(sint16 dutyCycle);
+void BuzzerInit(void);
 
 #endif /* PWM_H_ */

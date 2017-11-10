@@ -32,7 +32,7 @@
 #define SEVEN 0x37
 #define EIGHT 0x38
 #define NINE 0x39
-#define PUNTO 0x20
+#define PUNTO 0x2E
 
 typedef struct{
 	uint8 BTN0: 1;
@@ -94,13 +94,17 @@ void buttonsInit(void);
 /**It clears the button interruption flag*/
 void clearFlagC(void);
 /**/
-void convierteACelcius(uint8 decenaTemperatura, uint8 unidadTemperatura, uint8 primerDecimal, uint8 segundoDecimal);
-void convierteAFahrenheit(uint8 decenaTeperatura, uint8 unidadTemperatura);
 uint8 getInt(uint8 Decenas,uint8 Unidades);
 float getFloat(uint8 Decenas, uint8 Unidades, uint8 Decimal1, uint8 Decimal2);
 uint8 getDecena(uint8 value);
 uint8 getUnidad(uint8 value);
 void LCDsystem(void);
+uint8 getUnidad(uint8 value);
+uint8 getDecena(uint8 value);
+float getFloat(uint8 Decenas, uint8 Unidades, uint8 Decimal1, uint8 Decimal2);
+uint8 getInt(uint8 Decenas, uint8 Unidades);
+float convierteAFahrenheit(uint8 tempCelcius);
+uint8 convierteACelcius(float temperaturaFahrenheit);
 
 
 

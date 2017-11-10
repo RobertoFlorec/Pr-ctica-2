@@ -4055,3 +4055,1397 @@ java.io.IOException: Input Stream Closed
 	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
 	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 22:27:35.585
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 22:29:05.004
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 22:31:26.597
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 22:37:39.082
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:30:03.691
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-08 23:30:03.829
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@44c7abdd): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-08 23:30:03.829
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-08 23:30:03.830
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@76d7c506): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-08 23:30:03.830
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-08 23:30:03.833
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@62594c16): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-08 23:30:03.833
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-08 23:30:03.833
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1bb98ac3): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-08 23:30:03.833
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-08 23:30:03.834
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@bafcf0d): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-08 23:30:03.834
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:31:04.744
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:31:39.384
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:38:22.793
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:40:05.260
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:50:23.315
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:51:10.251
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:51:37.417
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:56:04.902
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-08 23:57:06.981
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 00:34:19.428
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:11:21.749
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 01:11:22.015
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@42abf79b): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 01:11:22.015
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 01:11:22.060
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@298e26fe): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 01:11:22.060
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 01:11:22.061
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@272c77c0): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 01:11:22.061
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 01:11:22.061
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@649affc7): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 01:11:22.061
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 01:11:22.062
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7910dbe0): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 01:11:22.062
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:12:22.568
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:13:45.608
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:15:27.253
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:16:24.679
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:26:08.515
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:50:30.122
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 01:54:20.040
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 02:23:09.643
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:23:09.802
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4cfb3b6): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:23:09.802
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:23:09.803
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4e160045): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:23:09.803
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:23:09.816
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6e4124c6): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:23:09.816
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:23:09.816
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@205bcd79): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:23:09.816
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:23:09.827
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@59f098c7): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:23:09.827
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 02:30:49.102
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:30:49.198
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@76b2001d): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:30:49.198
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:30:49.198
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6d2a2da7): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:30:49.198
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:30:49.218
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1993adf5): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:30:49.218
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:30:49.218
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@32674cf7): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:30:49.218
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:30:49.257
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5433004e): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:30:49.258
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 02:33:23.583
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:33:23.717
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@c3e7257): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:33:23.717
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:33:23.718
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7694d825): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:33:23.718
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:33:23.718
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@d6d6636): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:33:23.718
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:33:23.719
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@9b02321): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:33:23.719
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 02:33:23.720
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7663548a): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 02:33:23.720
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 02:37:20.422
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 02:41:37.072
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 09:32:26.895
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 09:32:26.913
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3bce2bd): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 09:32:26.913
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 09:32:26.913
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6a855c01): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 09:32:26.913
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 09:32:26.913
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@472cfeff): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 09:32:26.913
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 09:32:26.914
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4c91ad2): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 09:32:26.914
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 09:32:26.914
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6004b9fc): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 09:32:26.914
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 09:34:24.897
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 09:36:47.428
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 09:38:16.993
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:17:18.438
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:18:00.504
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:24:01.905
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:24:02.001
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@570b1201): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:24:02.001
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:24:02.001
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4a0b245a): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:24:02.001
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:24:02.001
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@2301a3ea): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:24:02.001
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:24:02.002
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@732fd7a7): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:24:02.002
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:24:02.002
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7cbb48d9): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:24:02.002
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:25:32.861
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:28:51.054
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:28:51.114
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@77fd0241): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:28:51.114
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:28:51.114
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1ed483b4): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:28:51.115
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:28:51.115
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@355adf35): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:28:51.115
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:28:51.115
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4c824c96): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:28:51.115
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:28:51.116
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@53f2a04d): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:28:51.116
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:31:19.643
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:31:55.928
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:32:29.880
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:37:52.045
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:37:52.180
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@441a42f0): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:37:52.180
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:37:52.203
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1bc450bd): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:37:52.203
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:37:52.203
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@2ea82c9b): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:37:52.204
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:37:52.204
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@48c46454): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:37:52.204
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 10:37:52.204
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5e5fa27e): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 10:37:52.204
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:42:22.110
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:43:39.852
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:50:42.388
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 10:51:34.708
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:05:05.904
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:08:44.202
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:11:19.960
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:15:23.372
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:19:50.592
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:20:43.112
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:21:54.232
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:22:25.085
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:26:00.939
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:27:02.943
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:27:46.412
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:28:38.732
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:31:39.977
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:34:40.136
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:35:19.661
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 11:37:36.321
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 11:37:36.397
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5e87811): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 11:37:36.397
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 11:37:36.419
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@431055bd): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 11:37:36.419
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 11:37:36.419
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@b9b83c0): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 11:37:36.419
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 11:37:36.546
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@c5609a3): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 11:37:36.546
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 11:37:36.567
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4a38c0c8): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 11:37:36.567
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:20:01.153
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:21:10.729
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:29:14.393
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:35:32.906
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:36:05.993
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:40:48.472
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:41:46.084
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:43:29.761
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 12:43:57.031
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:21:23.718
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@33324f37): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:21:23.718
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:21:50.382
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:21:52.143
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@35afe8ff): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:21:52.143
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:21:52.657
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@177b4936): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:21:52.657
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:22:56.230
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@33ab9794): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:22:56.230
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:24:15.085
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:24:16.952
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@2a031c7b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:24:16.952
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:24:17.452
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1a494872): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:24:17.452
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:25:58.687
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@3fbd3253): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:25:58.687
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:25:59.874
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:26:01.799
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@592a395f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:26:01.799
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:26:02.300
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@24b65eac): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:26:02.300
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:28:07.154
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@427d4413): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:28:07.154
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:28:07.452
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:28:09.392
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@2efbaa32): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:28:09.392
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:28:09.894
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@179e9fb9): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:28:09.894
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:29:01.963
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:02.073
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2135c084): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:02.073
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:03.861
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@6f825cae): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:03.861
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:04.360
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7a28d98d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:04.360
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:29:32.499
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:32.832
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6362f95b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:32.832
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:34.368
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@450d5249): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:34.368
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:29:34.870
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@20cb1d0c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:29:34.870
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:32:21.808
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:32:22.285
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6f69e8c3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:32:22.285
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:32:23.468
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@7f5b71cb): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:32:23.468
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:32:23.969
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@3e292dd): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:32:23.969
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:33:42.724
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@6bfb08d3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:33:42.724
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:33:44.049
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 13:33:46.023
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.SuspendAllAction$1@1c8d5541): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2017-11-09 13:33:46.023
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-11-09 13:33:46.532
+!MESSAGE An internal error occurred during: "Interrupt monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@551f6d69 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@3694d907[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 10159]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorInterruptJob.run(GDBBackend.java:764)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:34:10.109
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:38:52.470
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:43:59.748
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 13:50:31.736
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:05:44.449
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:06:41.223
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:12:27.444
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:17:32.770
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:27:09.119
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:42:31.687
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 14:42:31.789
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7c2d60e3): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 14:42:31.790
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 14:42:31.790
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5856bc52): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 14:42:31.790
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 14:42:31.802
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@2e0e68bb): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 14:42:31.802
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 14:42:31.855
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1f4f1ee6): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 14:42:31.855
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-11-09 14:42:31.876
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@8f24f94): Status ERROR: com.crt.dsfdebug code=10001 GDB Control not accessible. null' resulted in an error.
+!SUBENTRY 1 com.crt.dsfdebug 4 10001 2017-11-09 14:42:31.876
+!MESSAGE GDB Control not accessible.
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:47:22.023
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:49:08.673
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:52:14.548
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:54:31.934
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:55:34.843
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:58:09.217
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 14:58:40.523
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 15:02:29.936
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 15:38:00.878
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 18:59:14.665
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-11-09 19:03:18.702
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
